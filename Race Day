@@ -1,0 +1,25 @@
+let raceNumber = Math.floor(Math.random() * 1000);  // Random race number
+let runnerAge = 25;  // Example runner age
+let isRegisteredEarly = true;  // Example registration status
+
+// First control flow: Add 1000 to raceNumber if adult and registered early
+if (runnerAge > 18 && isRegisteredEarly) {
+  raceNumber += 1000;
+}
+
+// Second control flow: Early adults run at 9:30 am
+if (runnerAge > 18 && isRegisteredEarly) {
+  console.log(`You will race at 9:30 am. Your race number is ${raceNumber}.`);
+}
+// Else if: Late adults (over 18 and did not register early) run at 11:00 am
+else if (runnerAge > 18 && !isRegisteredEarly) {
+  console.log(`You will race at 11:00 am. Your race number is ${raceNumber}.`);
+}
+// Else if: Youth (under 18) run at 12:30 pm
+else if (runnerAge < 18) {
+  console.log(`You will race at 12:30 pm. Your race number is ${raceNumber}.`);
+}
+// Else: Runners exactly 18 years old should see the registration desk
+else {
+  console.log(`Please see the registration desk. Your race number is ${raceNumber}.`);
+}
